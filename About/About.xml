@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>A Truly Rich Explorer</name>
+  <author>alite</author>
+  <packageId>Alite.TrulyRichExplorer</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  
+  <modDependencies>
+    <li>
+      <packageId>ludeon.rimworld.odyssey</packageId>
+      <displayName>Odyssey</displayName>
+    </li>
+  </modDependencies>
+
+  <loadAfter>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+  </loadAfter>
+
+  <description>
+This mod changes the Rich Explorer scenario landing from the old drop pod approach to having the explorer standing around with their shuttle nearby. Your explorer will need to find some way to refuel it because it just ran out of fuel, but this gives you a chance for a truly rich experience.
+
+This simple patch mod is aimed at making the explorer start a tad more interesting, and for the most exemplary exploratory experience it is recommended that you start somewhere with ancient buildings to get chemfuel quickly to explore the world.
+
+[url=https://steamcommunity.com/id/alite/myworkshopfiles/?appid=294100]Easy link to all of my Rimworld mods[/url]
+
+[url=https://github.com/KonradHeinser/ATrulyRichExplorer][img]https://i.imgur.com/kTkpTOE.png[/img][/url]
+  </description>
+</ModMetaData>
