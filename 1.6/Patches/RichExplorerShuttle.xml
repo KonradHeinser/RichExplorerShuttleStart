@@ -17,4 +17,11 @@
             </li>
         </value>
     </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="PassengerShuttle"]/building/claimable</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="PassengerShuttle"]/building/claimable</xpath>
+        </match>
+    </Operation>
 </Patch>
