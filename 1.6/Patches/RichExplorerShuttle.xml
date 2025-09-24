@@ -7,15 +7,27 @@
         </value>
     </Operation>
     
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ScenarioDef[defName="TheRichExplorer"]/scenario/parts</xpath>
-        <value>
-            <li Class="ScenPart_ScatterThingsNearPlayerStart">
-                <def>ScatterThingsNearPlayerStart</def>
-                <thingDef>PassengerShuttle</thingDef>
-                <count>1</count>
-            </li>
-        </value>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="PassengerShuttle"]/stuffCategories</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ScenarioDef[defName="TheRichExplorer"]/scenario/parts</xpath>
+            <value>
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>PassengerShuttle</thingDef>
+                    <stuff>Steel</stuff>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ScenarioDef[defName="TheRichExplorer"]/scenario/parts</xpath>
+            <value>
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>PassengerShuttle</thingDef>
+                </li>
+            </value>
+        </nomatch>
     </Operation>
 
     <Operation Class="PatchOperationConditional">
