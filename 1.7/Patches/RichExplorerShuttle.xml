@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ScenarioDef[defName="TheRichExplorer"]/scenario/parts/li[@Class="ScenPart_PlayerPawnsArriveMethod"]/method</xpath>
+        <value>
+            <method>Standing</method>
+        </value>
+    </Operation>
+    
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="PassengerShuttle"]/stuffCategories</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ScenarioDef[defName="TheRichExplorer"]/scenario/parts</xpath>
+            <value>
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>PassengerShuttle</thingDef>
+                    <stuff>Steel</stuff>
+                </li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ScenarioDef[defName="TheRichExplorer"]/scenario/parts</xpath>
+            <value>
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>PassengerShuttle</thingDef>
+                </li>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="PassengerShuttle"]/building/claimable</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="PassengerShuttle"]/building/claimable</xpath>
+        </match>
+    </Operation>
+</Patch>
